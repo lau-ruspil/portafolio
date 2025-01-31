@@ -158,4 +158,8 @@ body {
 	.header-menu {
 		justify-content: center;
 	}
+
+	.contenedor-imagen {
+		width: 80%;
+	}
 }
