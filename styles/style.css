@@ -1,0 +1,161 @@
+/* Variables CSS */
+:root {
+	--color-primario: #000;
+	--color-secundario: #f6f6f6;
+	--color-terciario: #22d4fd;
+	--color-hover: #272727;
+
+	--fuente-krona: "Krona One";
+	--fuente-montserrat: "Montserrat";
+}
+
+/* Reseteo general */
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: #000;
+	color: #f6f6f6;
+	font-family: var(--fuente-montserrat), sans-serif;
+	min-height: 100vh;
+}
+
+.header {
+	padding: 2% 0% 0% 8%;
+}
+
+.header-menu {
+	display: flex;
+	gap: 80px;
+}
+
+.header-menu-link {
+	font-family: var(--fuente-montserrat), sans-serif;
+	font-size: 1.5rem;
+	font-weight: 600;
+	color: var(--color-terciario);
+	text-decoration: none;
+}
+
+/* Sección presentación */
+.presentacion {
+	display: flex;
+	align-items: center;
+	padding: 2% 8%;
+	justify-content: space-between;
+	padding-bottom: 20px; /* Espaciado adicional */
+	gap: 82px;
+}
+
+.presentacion-contenido {
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.presentacion-contenido-titulo {
+	font-family: var(--fuente-krona), sans-serif;
+	font-size: 1.75rem;
+}
+
+/* Títulos destacados */
+.titulo-destacado {
+	color: var(--color-terciario);
+}
+
+.presentacion-contenido-texto {
+	font-size: 1.375rem;
+}
+
+/* Enlaces de presentación */
+.presentacion-enlaces {
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+	align-items: center;
+	gap: 32px;
+}
+
+.presentacion-enlaces-subtitulo {
+	font-family: var(--fuente-krona), sans-serif;
+	font-size: 1.375rem;
+	font-weight: 400;
+}
+
+.presentacion-enlaces-link {
+	width: 50%;
+	text-align: center;
+	padding: 12px;
+	border: 2px solid var(--color-terciario);
+	border-radius: 8px;
+	font-weight: 600;
+	text-decoration: none;
+	color: #f6f6f6;
+}
+
+.presentacion-enlaces-link:hover {
+	background-color: var(--color-hover);
+}
+.bi {
+	margin-right: 10px;
+	color: var(--color-terciario);
+	font-size: 1.375rem;
+}
+
+.contenedor-imagen {
+	position: relative;
+	width: 50%;
+	height: 400px;
+	margin-left: 5%;
+	border: 1px solid var(--color-terciario);
+	background-color: var(--color-primario);
+	border-radius: 16px;
+	overflow: visible; /* Asegúrate de ocultar cualquier contenido que sobresalga */
+}
+
+.contenedor-imagen img {
+	position: absolute;
+	z-index: 10;
+	top: 10px;
+	right: 10px;
+	width: 100%; /* La imagen ocupa el ancho completo del contenedor */
+	height: 100%; /* La imagen ocupa la altura completa del contenedor */
+	object-fit: cover; /* La imagen se recorta para ajustarse completamente al contenedor */
+	border-radius: 16px; /* Se asegura que coincida con el contenedor */
+}
+
+.footer {
+	background-color: var(--color-terciario);
+	padding: 1.5rem;
+	color: var(--color-primario);
+	text-align: center;
+	font-family: var(--fuente-montserrat), sans-serif;
+	font-size: 1.375rem;
+	font-weight: 400;
+	position: relative;
+	bottom: 0;
+	right: 0;
+}
+
+@media (max-width: 1200px) {
+	.presentacion {
+		flex-direction: column-reverse;
+		padding: 5%;
+	}
+
+	.presentacion-contenido {
+		width: auto;
+	}
+
+	.header {
+		padding: 10%;
+	}
+
+	.header-menu {
+		justify-content: center;
+	}
+}
